@@ -1,0 +1,57 @@
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+myvirtualenv/
+env/
+.env
+.venv
+*.env
+
+# --- Django Specific ---
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+# Ignore collected static files in production
+static_root/
+staticfiles/
+# Ignore user-uploaded media (prescriptions, profile pics)
+media/
+
+# --- PostgreSQL & Database ---
+*.sql
+*.dump
+.pgpass
+
+# --- Django Migrations ---
+# We keep the folder but ignore the generated files to ensure 
+# clean database sync on different machines/PostgreSQL setups.
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# --- Frontend (React) - CRITICAL ---
+# Never upload node_modules; it's massive and generated via 'npm install'
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Celery & Redis ---
+# Ignore celery worker schedules and logs
+celerybeat-schedule
+*.log
+
+# --- IDE & OS Files ---
+.vscode/
+.idea/
+*.swp
+*.bak
+.DS_Store
+Thumbs.db

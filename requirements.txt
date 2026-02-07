@@ -1,0 +1,24 @@
+# --- Core Framework ---
+django>=4.2,<5.0
+djangorestframework
+django-cors-headers
+
+# --- Database (PostgreSQL) ---
+psycopg2-binary
+
+# --- Authentication (Google & JWT) ---
+django-allauth
+dj-rest-auth
+djangorestframework-simplejwt
+
+# --- Asynchronous Tasks (Celery & Redis) ---
+celery
+redis
+
+# --- Payments ---
+razorpay
+
+# --- Production & Security ---
+gunicorn
+python-dotenv
+django-environ
